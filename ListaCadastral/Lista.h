@@ -42,6 +42,12 @@ bool Lista::vazia()
         return false;
 }
 
+bool Lista::cheia()
+{
+    //A lista não possui capacidade máxima implementada
+    return true;
+}
+
 bool Lista::estaNaLista(int x)
 {
   /*
