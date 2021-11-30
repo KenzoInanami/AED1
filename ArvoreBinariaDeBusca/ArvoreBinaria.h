@@ -119,13 +119,14 @@ void retira(arvoreptr *raiz, int x, bool *ok)
   }
 }
 
-void deletar(arvoreptr *raiz)
+void deleta(arvoreptr *raiz)
 { 
   /* Apaga todos os nós da árvore e deixa vazia. */
   if(!vazia(&(*raiz))){
-    deletar(&(*raiz)->esq);
-    deletar(&(*raiz)->dir);
+    deleta(&(*raiz)->esq);
+    deleta(&(*raiz)->dir);
     free(*raiz);
+    *raiz = nullptr;
   }
 }
 
